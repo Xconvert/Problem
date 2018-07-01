@@ -1,0 +1,11 @@
+# Problem
+  在使用Android导入项目时，不小心导致文件夹创建的恐怖的递归，创建了一个超级长的文件夹。尝试着各种形式的删除，例如，360的粉碎文件，文件资源管理器，或者命令行下del都用了，还是不能删除。在http://download.csdn.net/detail/u014535666/8769871下载robocopy，然后解压得到robocopy.exe。
+假如超长文件夹的路径是G:/app/main/src/main.....
+1.在G:/app打开cmd
+2.在G:/app下新建一个空的文件夹：empty_dir
+3.输入：robocopy empty_dir app /purge
+6.等待命令执行完（我大概等了10分钟，屏幕一直在滚动）
+7.命令执行完成后，原来的超长文件夹 app 被改为和 empty_dir 相同，也就说是个空的文件夹了，正常删除！
+8.完成
+
+    注意此方法将删除目标路径下所有文件，慎用！！！
